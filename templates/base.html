@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="menu">
+        <div style="{% if active == 'main' %}font-weight:700;{% endif %}">
+            <a href="/">Главная</a>
+        </div>
+        <div style="{% if active == 'groups' %}font-weight:700;{% endif %}">
+            <a href="/groups">Группы</a>
+        </div>
+        <div>
+            <a href="/download">Скачать!</a>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

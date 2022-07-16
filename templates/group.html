@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>Группа {{ group }}</h1>
+<br>
+<div style="background-color: green; color: #fff; margin: 10px;">
+    {% for day, lessons in timetable %}
+        <p>{{ day }}</p>
+        <div style="background-color: #87939a;border-style: solid;">
+            {% for lesson in lessons %}
+                <p>{{ lesson.name }}</p>
+                <p>{{ lesson.group }}</p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
